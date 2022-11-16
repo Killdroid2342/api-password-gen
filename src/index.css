@@ -20,8 +20,3 @@ a {
 body {
   background-color: #181818;
 }
-@layer components {
-  .btn {
-    @apply rounded-lg border-2 border-white text-white mt-14 p-2 font-bold;
-  }
-}
