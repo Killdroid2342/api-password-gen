@@ -11,13 +11,19 @@ const PasswordGen = () => {
   };
   return (
     <div className='flex flex-col items-center justify-center my-auto h-screen'>
-      <div className=' border-2 border-white'>
+      <div className=' border-2 border-white flex flex-col'>
         <h1 className=''>Password Generator</h1>
         <p className='border-2 border-white'>{password}</p>
-        <button onClick={getRandomPassword} className=''>
+        <button
+          onClick={getRandomPassword}
+          className='border-2 border-white rounded-md'
+        >
           Generate Password
         </button>
-        <button className='' onClick={savePassword}>
+        <button
+          className='border-2 border-white rounded-md'
+          onClick={savePassword}
+        >
           Copy Password
         </button>
       </div>
