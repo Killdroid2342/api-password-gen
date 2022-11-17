@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 
 const PasswordGen = () => {
-  document.title = 'Password Generator';
+  document.title = 'Password Generator 2.0';
   const [password, setPassword] = useState('Click Button To Generate Password');
 
   const getRandomPassword = () => {};
   const savePassword = () => {
     navigator.clipboard.writeText(password);
-    alert(`This is the password that you have copied: ${password}`);
+    alert(`Your Password Is: ${password}`);
   };
   return (
     <div className='flex flex-col items-center justify-center my-auto h-screen text-center '>
       <div className=' border-2 border-white flex flex-col rounded-md p-12 '>
-        <h1 className='pb-8 text-2xl'>Password Generator</h1>
+        <h1 className='pb-8 text-2xl'>Password Generator 2.0</h1>
         <p className='border-2 border-white p-2 rounded-xl'>{password}</p>
         <button
           onClick={getRandomPassword}
