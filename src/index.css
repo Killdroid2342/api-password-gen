@@ -19,4 +19,7 @@ a {
 }
 body {
   background-color: #181818;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    'Liberation Mono', 'Courier New', monospace;
+  color: white;
 }
