@@ -2,9 +2,19 @@ import React, { useState } from 'react';
 
 const PasswordGen = () => {
   document.title = 'Password Generator 2.0';
-  const [password, setPassword] = useState('Click Button To Generate Password');
+  const [password, setPassword] = useState([{}]);
 
-  const getRandomPassword = () => {};
+  const getRandomPassword = () => {
+    let API =
+      'https://passwordinator.herokuapp.com/generate?num=true&caps=true&char=true&len=8';
+
+    fetch(API)
+      .then((res) => res.json)
+      .then((data) => {
+        setPassword(data);
+      });
+  };
+  console.log(getRandomPassword);
   const savePassword = () => {
     navigator.clipboard.writeText(password);
     alert(`Your Password Is: ${password}`);
