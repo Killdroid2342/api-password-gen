@@ -14,7 +14,7 @@ const PasswordGen = () => {
         setPassword(data);
       });
   };
-  console.log(getRandomPassword);
+  // console.log(getRandomPassword);
   const savePassword = () => {
     navigator.clipboard.writeText(password);
     alert(`Your Password Is: ${password}`);
@@ -24,7 +24,7 @@ const PasswordGen = () => {
       <div className=' border-2 border-white flex flex-col rounded-md p-12 '>
         <h1 className='pb-8 text-2xl'>Password Generator 2.0</h1>
         {typeof password === 'undefined' ? (
-          <p>test.</p>
+          <p>Waiting For Password...</p>
         ) : (
           <p className='border-2 border-white p-2 rounded-xl'>
             {password.data}
