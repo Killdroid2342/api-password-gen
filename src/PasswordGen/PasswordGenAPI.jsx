@@ -1,13 +1,22 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 
 const PasswordGen = () => {
   document.title = 'Password Generator 2.0';
   const [password, setPassword] = useState();
 
-  // let API =
-  //   'https://passwordinator.herokuapp.com/generate?num=true&caps=true&char=true&len=8';
-
-  const getRandomPassword = () => {};
+  const getRandomPassword = () => {
+    axios
+      .get(
+        'https://passwordinator.herokuapp.com/generate?num=true&caps=true&char=true&len=8'
+      )
+      .then((res) => {
+        setPassword(res.data.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   // console.log(getRandomPassword);
   const savePassword = () => {
     navigator.clipboard.writeText(password);
