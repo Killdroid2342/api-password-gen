@@ -7,8 +7,8 @@ const PasswordGen = () => {
     'Click Button Below To Generate Password'
   );
 
-  const getRandomPassword = () => {
-    axios
+  const getRandomPassword = async () => {
+    await axios
       .get(
         'https://passwordinator.herokuapp.com/generate?num=true&caps=true&char=true&len=16'
       )
