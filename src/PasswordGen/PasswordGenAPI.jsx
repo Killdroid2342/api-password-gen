@@ -10,7 +10,7 @@ const PasswordGen = () => {
   const getRandomPassword = () => {
     axios
       .get(
-        'https://passwordinator.herokuapp.com/generate?num=true&caps=true&char=true&len=8'
+        'https://passwordinator.herokuapp.com/generate?num=true&caps=true&char=true&len=12'
       )
       .then((res) => {
         setPassword(res.data.data);
