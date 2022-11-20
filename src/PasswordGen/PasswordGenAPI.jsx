@@ -3,7 +3,9 @@ import React, { useState } from 'react';
 
 const PasswordGen = () => {
   document.title = 'Password Generator 2.0';
-  const [password, setPassword] = useState();
+  const [password, setPassword] = useState(
+    'Click Button Below To Generate Password'
+  );
 
   const getRandomPassword = () => {
     axios
