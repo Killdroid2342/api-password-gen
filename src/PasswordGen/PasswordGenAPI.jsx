@@ -20,7 +20,7 @@ const PasswordGen = () => {
       })
       .catch((err) => {
         console.log(err);
-        setErrorMessage('Wait a few seconds, stop spamming retard');
+        setErrorMessage('Wait a few seconds, stop spamming. Thank You');
       });
   };
   // console.log(getRandomPassword);
