@@ -14,12 +14,12 @@ const PasswordGen = () => {
         'https://passwordinator.herokuapp.com/generate?num=true&caps=true&char=true&len=16'
       )
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         setErrorMessage('');
         setPassword(res.data.data);
       })
       .catch((err) => {
-        console.log(err);
+        // console.log(err);
         setErrorMessage('Wait a few seconds, stop spamming. Thank You');
       });
   };
